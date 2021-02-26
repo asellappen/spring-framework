@@ -21,7 +21,8 @@ arch:
   - amd64
   - ppc64le
 script :
-    - travis_wait 15 ./gradlew build
-    - travis_wait 15 ./gradlew clean test
-    - ./gradlew intTest
-    - ./gradlew  integration-tests
+    #- travis_wait 15 ./gradlew build
+    #- travis_wait 15 ./gradlew clean test
+    #- ./gradlew intTest
+    - sh -x ci/scripts/build-project.sh
+    - sh -x ci/scripts/check-project.sh
