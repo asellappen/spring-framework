@@ -21,7 +21,7 @@ arch:
   - amd64
   - ppc64le
 script :
-    - ./gradlew build
+    - ./gradlew build --warning-mode all
     - ./gradlew -a :spring-webmvc:test
     - ./gradlew publishToMavenLocal -x javadoc -x dokka -x asciidoctor -x asciidoctorPdf
     - ./gradlew install -x javadoc
