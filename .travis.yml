@@ -21,8 +21,11 @@ arch:
   - amd64
   - ppc64le
 script :
-    - travis_wait 15 ./gradlew build
-    - travis_wait 15 ./gradlew clean test
-    #- ./gradlew intTest
-    #- sh -x ci/scripts/build-project.sh
-    #- sh -x ci/scripts/check-project.sh
+    - cd spring-framework
+    - ./gradlew build
+    - ./gradlew -a :spring-webmvc:test
+    - ./gradlew publishToMavenLocal -x javadoc -x dokka -x asciidoctor -x asciidoctorPdf
+    - ./gradlew install -x javadoc
+    - ./gradlew clean test
+    
+
