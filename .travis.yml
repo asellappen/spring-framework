@@ -21,7 +21,6 @@ arch:
   - amd64
   - ppc64le
 script :
-    - cd spring-framework
     - ./gradlew build
     - ./gradlew -a :spring-webmvc:test
     - ./gradlew publishToMavenLocal -x javadoc -x dokka -x asciidoctor -x asciidoctorPdf
