@@ -21,8 +21,6 @@ arch:
 script :
     - ./gradlew build --warning-mode all
     - ./gradlew -a :spring-webmvc:test
-    - ./gradlew publishToMavenLocal -x javadoc -x dokka -x asciidoctor -x asciidoctorPdf
-    - ./gradlew install -x javadoc
     - ./gradlew clean test
     
 
