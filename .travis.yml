@@ -10,7 +10,7 @@
 #
 # ----------------------------------------------------------------------------
 language: java
-dist :bionic
+dist: bionic
 jdk:
    - openjdk9
 os:
