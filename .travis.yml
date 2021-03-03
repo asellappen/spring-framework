@@ -12,7 +12,7 @@
 language: java
 
 jdk:
-   - openjdk11
+   - openjdk9
 os:
   - linux
 arch:
