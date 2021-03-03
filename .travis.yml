@@ -23,8 +23,8 @@ matrix:
      jdk: openjdk11
 
 script :
-    - ./gradlew build --warning-mode all
-    - ./gradlew -a :spring-webmvc:test
-    - ./gradlew clean test
+    - ./gradlew build --warning-mode all -x checkstyleNohttp 
+    - ./gradlew -a :spring-webmvc:test -x checkstyleNohttp 
+    - ./gradlew clean test -x checkstyleNohttp 
     
 
