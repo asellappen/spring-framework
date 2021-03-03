@@ -20,9 +20,9 @@ arch:
 script :
 #checkstyleNohttp not supproted for ppc64le
    - if [[ "$TRAVIS_CPU_ARCH" == "ppc64le" ]]; then 
-      ./gradlew build --warning-mode all -x checkstyleNohttp 
-      ./gradlew -a :spring-webmvc:test -x checkstyleNohttp 
-      ./gradlew clean test -x checkstyleNohttp
+      ./gradlew build --warning-mode all -x checkstyleNohttp;
+      ./gradlew -a :spring-webmvc:test -x checkstyleNohttp;
+      ./gradlew clean test -x checkstyleNohttp;
      else
       ./gradlew build --warning-mode all ;
       ./gradlew -a :spring-webmvc:test ;
