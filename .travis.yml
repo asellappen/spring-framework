@@ -13,11 +13,18 @@ language: java
 dist: bionic
 jdk:
    - openjdk9
-os:
-  - linux
-arch:
-  - amd64
-  - ppc64le
+   
+matrix:
+  include:
+   - arch: ppc64le 
+     os: linux
+     dist: bionic
+     jdk: openjdk10
+   - arch: amd64 
+     os: linux
+     dist: xenial
+     jdk: openjdk11
+
 script :
     - ./gradlew build --warning-mode all
     - ./gradlew -a :spring-webmvc:test
