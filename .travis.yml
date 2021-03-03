@@ -10,17 +10,17 @@
 #
 # ----------------------------------------------------------------------------
 language: java
-   
+
+jdk: openjdk11
+
 matrix:
   include:
    - arch: amd64 
      os: linux
      dist: xenial
-     jdk: openjdk11
    - arch: ppc64le 
      os: linux
      dist: bionic
-     jdk: openjdk10
 
 script :
 #checkstyleNohttp not supproted for ppc64le
