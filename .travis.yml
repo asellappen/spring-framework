@@ -10,9 +10,6 @@
 #
 # ----------------------------------------------------------------------------
 language: java
-dist: bionic
-jdk:
-   - openjdk9
    
 matrix:
   include:
